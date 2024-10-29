@@ -1,0 +1,32 @@
+import turtle
+
+# Set up the screen and turtle
+screen = turtle.Screen()
+screen.bgcolor("white")
+
+flower = turtle.Turtle()
+flower.shape("turtle")
+flower.speed(10)
+
+# Function to draw a petal
+def draw_petal():
+    flower.color("red")
+    flower.begin_fill()
+    flower.circle(50, 60)
+    flower.left(120)
+    flower.circle(50, 60)
+    flower.end_fill()
+
+# Draw the flower by repeating petals
+for _ in range(6):
+    draw_petal()
+    flower.right(60)
+
+# Draw the stem
+flower.color("green")
+flower.right(90)
+flower.forward(200)
+
+# Hide the turtle and display the window
+flower.hideturtle()
+turtle.done()
